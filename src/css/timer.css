@@ -1,0 +1,21 @@
+#datetime-picker,
+.label,
+button {
+  font-size: 30px;
+}
+
+.timer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 25px;
+  text-shadow: 3px 3px 2px #808080;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+}
+.value {
+  font-size: 50px;
+}
