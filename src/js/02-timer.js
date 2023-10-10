@@ -33,7 +33,8 @@ flatpickr("#datetime-picker", options);
 startBtn.addEventListener('click', onStartBtnClick);
 
 function onStartBtnClick() {
-    intervalId = setInterval(() => {
+    startBtn.disabled = true;
+    const intervalId = setInterval(() => {
         const currentTime = new Date();
         const deltaTime = targetTime - currentTime;
         // console.log(deltaTime);
