@@ -16,17 +16,15 @@ function onFormSubmit(evt) {
   const step = Number(formElems.step.value);
   const amount = Number(formElems.amount.value);  
   
-  let delayCounter = delay;
-
-  for (let i = 1; i <= amount; i++) {
-    createPromise(i, delayCounter)
+    for (let i = 1; i <= amount; i++) {
+    createPromise(i, delay)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
       })
       .catch(({ position, delay }) => {
         Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
       });
-    delayCounter += step;    
+    delay += step;    
   }
 }
 
